@@ -17,12 +17,3 @@ class Block:
                    str(self.data).encode("utf-8") +
                    str(self.previous_hash).encode("utf-8"))
         return sha.hexdigest()
-
-
-# self = previous block
-def generate_new_block(self):
-    this_index = self.index + 1
-    this_timestamp = datetime.datetime.now()
-    this_data = "Data of block number" + str(this_index)
-    this_hash = self.hash
-    return Block(this_index, this_timestamp, this_data, this_hash)
